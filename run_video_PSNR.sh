@@ -34,11 +34,11 @@ do
         echo $'\n' >> $result_output
         ffmpeg -i $input -i $reference -filter_complex psnr -f null - 1>> $result 2>> temp.txt
         grep -n 'Parsed' temp.txt >> $result_output
+        rm temp.txt
     done
   
 done
 echo $'\n==================================================================== \n ' >> $result_output
 
-rm temp.txt
 rm $result
 
