@@ -4,6 +4,8 @@
 # reference : xxx_1440p_10M_skylake-1080-4500k-vaapi-sdhe.mp4
 # reference : xxx_1440p_10M-m2000-1080-4500k-nvenc-hdhe-vbr.mp4
 # reference : xxx_1440p_10M-m2000-1080-4500k-nvenc-hdhe-cbr.mp4
+# reference : xxx_1440p_10M_kabylake-1080-4500k-vaapi-hdhe.mp4 
+# reference : xxx_1440p_10M_kabylake-1080-4500k-vaapi-sdhe.mp4
 
 datetime=$(date +%Y%m%d_%H%M%S)
 result=$datetime"_result.txt"
