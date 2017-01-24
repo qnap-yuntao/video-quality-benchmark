@@ -29,14 +29,16 @@ do
         echo "input " $input
         echo "reference " $reference
         echo $'\n==================================================================== \n ' >> $result_output
-        echo "input " $input >> result_output.txt
-        echo "reference " $reference >> result_output.txt
-        echo $'\n' >> result_output.txt
-        ffmpeg -i $input -i $reference -filter_complex psnr -f null - 1>> $result 2>> $result_output
+        echo "input "$input >> $result_output
+        echo "reference "$reference >> $result_output
+        echo $'\n' >> $result_output
+        ffmpeg -i $input -i $reference -filter_complex psnr -f null - 1>> $result 2>> temp.txt
+        grep -n 'Parsed' temp.txt >> $result_output
     done
   
 done
 echo $'\n==================================================================== \n ' >> $result_output
 
+rm temp.txt
 rm $result
 
