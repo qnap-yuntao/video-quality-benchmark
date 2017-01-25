@@ -6,6 +6,10 @@
 # reference : xxx_1440p_10M-m2000-1080-4500k-nvenc-hdhe-cbr.mp4
 # reference : xxx_1440p_10M_kabylake-1080-4500k-vaapi-hdhe.mp4 
 # reference : xxx_1440p_10M_kabylake-1080-4500k-vaapi-sdhe.mp4
+# reference : xxx_1440p_10M_gst_4.5M-cbr.mp4
+# reference : xxx_1440p_10M_gst_4.5M-cbr-bf2.mp4
+# reference : xxx_1440p_10M_gst_4.5M-cbr-bf2-tune1.mp4
+
 
 datetime=$(date +%Y%m%d_%H%M%S)
 result=$datetime"_result.txt"
@@ -24,8 +28,13 @@ result_output=$datetime"_result_output.txt"
 # reference_arr=(xxx_1440p_10M_kabylake-1080-4500k-vaapi-hdhe.mp4 xxx_1440p_10M_kabylake-1080-4500k-vaapi-sdhe.mp4)
 
 # test all data
+# input_arr=(xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4 xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4)
+# reference_arr=(xxx_1440p_10M_skylake-1080-4500k-vaapi-hdhe.mp4 xxx_1440p_10M_skylake-1080-4500k-vaapi-sdhe.mp4 xxx_1440p_10M-m2000-1080-4500k-nvenc-hdhe-vbr.mp4 xxx_1440p_10M-m2000-1080-4500k-nvenc-hdhe-cbr.mp4 xxx_1440p_10M_kabylake-1080-4500k-vaapi-hdhe.mp4 xxx_1440p_10M_kabylake-1080-4500k-vaapi-sdhe.mp4)
+
+# test gstreamer data 20170125
 input_arr=(xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4 xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4)
-reference_arr=(xxx_1440p_10M_skylake-1080-4500k-vaapi-hdhe.mp4 xxx_1440p_10M_skylake-1080-4500k-vaapi-sdhe.mp4 xxx_1440p_10M-m2000-1080-4500k-nvenc-hdhe-vbr.mp4 xxx_1440p_10M-m2000-1080-4500k-nvenc-hdhe-cbr.mp4 xxx_1440p_10M_kabylake-1080-4500k-vaapi-hdhe.mp4 xxx_1440p_10M_kabylake-1080-4500k-vaapi-sdhe.mp4)
+reference_arr=(xxx_1440p_10M_gst_4.5M-cbr.mp4 xxx_1440p_10M_gst_4.5M-cbr-bf2.mp4 xxx_1440p_10M_gst_4.5M-cbr-bf2-tune1.mp4)
+
 
 for input in ${input_arr[@]};
 do
