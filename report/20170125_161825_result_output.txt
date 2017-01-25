@@ -1,0 +1,21 @@
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4
+reference xxx_1440p_10M_skylake-1080-CodexPack_4.5.0.mobile1080p_H264_@_MP3_@.MPEG4.MP4
+
+
+[Parsed_ssim_0 @ 0x1157020] SSIM Y:0.880312 U:0.971169 V:0.964668 All:0.909514 (10.434202)
+[Parsed_psnr_1 @ 0x115a7e0] PSNR y:20.97 u:34.75 v:33.26 average:22.58 min:5.95 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4
+reference xxx_1440p_10M_skylake-1080-CodexPack_4.5.0.mobile1080p_H264_@_MP3_@.MPEG4.MP4
+
+
+[Parsed_ssim_0 @ 0x1281a40] SSIM Y:0.881736 U:0.972736 V:0.966287 All:0.910995 (10.505844)
+[Parsed_psnr_1 @ 0x12823a0] PSNR y:20.97 u:34.77 v:33.28 average:22.59 min:5.95 max:inf
+
+==================================================================== 
+ 

@@ -1,0 +1,165 @@
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4
+reference xxx_1440p_10M_skylake-1080-4500k-vaapi-hdhe.mp4
+
+
+[Parsed_ssim_0 @ 0x10ae400] SSIM Y:0.973260 U:0.985782 V:0.984193 All:0.977170 (16.414864)
+[Parsed_psnr_1 @ 0x10b32c0] PSNR y:37.20 u:45.10 v:44.69 average:38.58 min:23.30 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4
+reference xxx_1440p_10M_skylake-1080-4500k-vaapi-sdhe.mp4
+
+
+[Parsed_ssim_0 @ 0x22d2400] SSIM Y:0.973178 U:0.985809 V:0.984196 All:0.977119 (16.405307)
+[Parsed_psnr_1 @ 0x22d72c0] PSNR y:37.21 u:45.10 v:44.68 average:38.58 min:23.32 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4
+reference xxx_1440p_10M-m2000-1080-4500k-nvenc-hdhe-vbr.mp4
+
+
+[Parsed_ssim_0 @ 0x1ff4420] SSIM Y:0.988695 U:0.992089 V:0.991218 All:0.989681 (19.863727)
+[Parsed_psnr_1 @ 0x1f4e920] PSNR y:44.09 u:48.64 v:48.13 average:45.08 min:33.94 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4
+reference xxx_1440p_10M-m2000-1080-4500k-nvenc-hdhe-cbr.mp4
+
+
+[Parsed_ssim_0 @ 0x1abfee0] SSIM Y:0.987145 U:0.991309 V:0.990336 All:0.988371 (19.344459)
+[Parsed_psnr_1 @ 0x1ac0840] PSNR y:43.36 u:48.07 v:47.60 average:44.37 min:32.16 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4
+reference xxx_1440p_10M_kabylake-1080-4500k-vaapi-hdhe.mp4
+
+
+[Parsed_ssim_0 @ 0x1ddc540] SSIM Y:0.970335 U:0.985404 V:0.983678 All:0.975070 (16.032815)
+[Parsed_psnr_1 @ 0x1ddcd00] PSNR y:36.39 u:44.91 v:44.44 average:37.80 min:23.14 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4
+reference xxx_1440p_10M_kabylake-1080-4500k-vaapi-sdhe.mp4
+
+
+[Parsed_ssim_0 @ 0x192d540] SSIM Y:0.970335 U:0.985404 V:0.983678 All:0.975070 (16.032815)
+[Parsed_psnr_1 @ 0x192dd00] PSNR y:36.39 u:44.91 v:44.44 average:37.80 min:23.14 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4
+reference xxx_1440p_10M_gst_4.5M-cbr.mp4
+
+
+[Parsed_ssim_0 @ 0xd53140] SSIM Y:0.882265 U:0.969986 V:0.963540 All:0.910431 (10.478437)
+[Parsed_psnr_1 @ 0xcaebe0] PSNR y:21.00 u:34.76 v:33.27 average:22.62 min:5.95 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4
+reference xxx_1440p_10M_gst_4.5M-cbr-bf2.mp4
+
+
+[Parsed_ssim_0 @ 0x7e6220] SSIM Y:0.882551 U:0.970062 V:0.963634 All:0.910650 (10.489066)
+[Parsed_psnr_1 @ 0x742560] PSNR y:21.00 u:34.77 v:33.28 average:22.62 min:5.95 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-4500k-x264-sdse.mp4
+reference xxx_1440p_10M_gst_4.5M-cbr-bf2-tune1.mp4
+
+
+[Parsed_ssim_0 @ 0x20cf220] SSIM Y:0.882551 U:0.970062 V:0.963634 All:0.910650 (10.489066)
+[Parsed_psnr_1 @ 0x202b560] PSNR y:21.00 u:34.77 v:33.28 average:22.62 min:5.95 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4
+reference xxx_1440p_10M_skylake-1080-4500k-vaapi-hdhe.mp4
+
+
+[Parsed_ssim_0 @ 0x25529c0] SSIM Y:0.973327 U:0.985816 V:0.984212 All:0.977223 (16.424953)
+[Parsed_psnr_1 @ 0x2553320] PSNR y:37.23 u:45.11 v:44.69 average:38.60 min:23.29 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4
+reference xxx_1440p_10M_skylake-1080-4500k-vaapi-sdhe.mp4
+
+
+[Parsed_ssim_0 @ 0x1e819c0] SSIM Y:0.973244 U:0.985842 V:0.984212 All:0.977172 (16.415243)
+[Parsed_psnr_1 @ 0x1e82320] PSNR y:37.23 u:45.10 v:44.68 average:38.60 min:23.31 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4
+reference xxx_1440p_10M-m2000-1080-4500k-nvenc-hdhe-vbr.mp4
+
+
+[Parsed_ssim_0 @ 0x222a360] SSIM Y:0.988946 U:0.992100 V:0.991210 All:0.989849 (19.934987)
+[Parsed_psnr_1 @ 0x222ab20] PSNR y:44.35 u:48.65 v:48.13 average:45.29 min:34.59 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4
+reference xxx_1440p_10M-m2000-1080-4500k-nvenc-hdhe-cbr.mp4
+
+
+[Parsed_ssim_0 @ 0x17b9420] SSIM Y:0.987434 U:0.991425 V:0.990465 All:0.988604 (19.432652)
+[Parsed_psnr_1 @ 0x17b9d80] PSNR y:43.57 u:48.11 v:47.66 average:44.56 min:32.26 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4
+reference xxx_1440p_10M_kabylake-1080-4500k-vaapi-hdhe.mp4
+
+
+[Parsed_ssim_0 @ 0xf887e0] SSIM Y:0.970373 U:0.985443 V:0.983700 All:0.975106 (16.039034)
+[Parsed_psnr_1 @ 0xf89140] PSNR y:36.40 u:44.91 v:44.44 average:37.82 min:23.13 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4
+reference xxx_1440p_10M_kabylake-1080-4500k-vaapi-sdhe.mp4
+
+
+[Parsed_ssim_0 @ 0xb5a7e0] SSIM Y:0.970373 U:0.985443 V:0.983700 All:0.975106 (16.039034)
+[Parsed_psnr_1 @ 0xb5b140] PSNR y:36.40 u:44.91 v:44.44 average:37.82 min:23.13 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4
+reference xxx_1440p_10M_gst_4.5M-cbr.mp4
+
+
+[Parsed_ssim_0 @ 0x2529f60] SSIM Y:0.882082 U:0.969983 V:0.963538 All:0.910308 (10.472478)
+[Parsed_psnr_1 @ 0x24858a0] PSNR y:21.00 u:34.75 v:33.27 average:22.61 min:5.95 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4
+reference xxx_1440p_10M_gst_4.5M-cbr-bf2.mp4
+
+
+[Parsed_ssim_0 @ 0x1edd2c0] SSIM Y:0.882356 U:0.970046 V:0.963621 All:0.910515 (10.482510)
+[Parsed_psnr_1 @ 0x1ee0840] PSNR y:21.00 u:34.76 v:33.27 average:22.62 min:5.95 max:inf
+
+==================================================================== 
+ 
+input xxx_1440p_10M_skylake-1080-unlimited-x264-sdse.mp4
+reference xxx_1440p_10M_gst_4.5M-cbr-bf2-tune1.mp4
+
+
+[Parsed_ssim_0 @ 0x1bf42c0] SSIM Y:0.882356 U:0.970046 V:0.963621 All:0.910515 (10.482510)
+[Parsed_psnr_1 @ 0x1bf7840] PSNR y:21.00 u:34.76 v:33.27 average:22.62 min:5.95 max:inf
+
+==================================================================== 
+ 
