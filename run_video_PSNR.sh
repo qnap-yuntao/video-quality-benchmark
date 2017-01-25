@@ -48,6 +48,7 @@ do
         echo "reference "$reference >> $result_output
         echo $'\n' >> $result_output
         ffmpeg -i $input -i $reference -filter_complex psnr -f null - 1>> $result 2>> temp.txt
+        # ffmpeg -i main.mpg -i ref.mpg -lavfi  "ssim;[0:v][1:v]psnr" -f null - 1>> $result 2>> temp.txt
         grep 'Parsed' temp.txt >> $result_output
         rm temp.txt
     done
