@@ -43,16 +43,17 @@ do
     for reference in ${referenceArray[@]}
     do
         echo $datetime
-        echo "input "$input
-        echo "reference "$reference
-
-        echo $'\n====================================================================\n' >> $result_output
-        ffmpeg -i $input -i $reference -filter_complex psnr -f null - 2 >> temp.txt
-        grep 'Input\|Parsed_psnr' temp.txt | awk 'NR==1{print "input: \t\t"  $5} NR==2{print "reference: \t" $5} NR==3{print}' >> result.txt
-
+        echo $'\ninput : \t'$input
+        echo $'reference : \t'$reference
+        echo $'\n====================================================================\n'
+        echo $'\n====================================================================\n' >> $result.txt
+        echo "ffmpeg start"
+        ffmpeg -i $input -i $reference -filter_complex psnr -f null - 2>> temp.txt
+        echo "ffmpeg end"
+        grep 'Input\|Parsed_psnr' temp.txt | awk 'NR==1{print "input: \t\t"  $5} NR==2{print "reference: \t" $5} NR==3{print}' >> $result.txt
+        rm temp.txt
         # ffmpeg -i $input -i $reference -lavfi  "ssim;[0:v][1:v]psnr" -f null - 1>> $result 2>> temp.txt
 
     done
 done
-
 
