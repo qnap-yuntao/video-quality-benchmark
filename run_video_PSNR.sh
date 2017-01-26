@@ -21,8 +21,8 @@ do
         tee -a $result
 
         #ffmpeg -i $input -i $reference -filter_complex psnr -f null - 2 -
-        ffmpeg -i $input -i $reference -lavfi  "ssim;[0:v][1:v]psnr" -f null - |& \
 
+        ffmpeg -i $input -i $reference -lavfi  "ssim;[0:v][1:v]psnr" -f null - |& \
         grep 'Input\|Parsed_psnr\|Parsed_ssim' | \
         awk 'NR==1{print "input: \t\t"  $5} NR==2{print "reference: \t" $5} NR==3{print} NR==4{print}' | \
         tee -a $result
