@@ -25,7 +25,7 @@ do
         ffmpeg -i $input -i $reference -lavfi  "ssim;[0:v][1:v]psnr" -f null - 2>> temp.txt
         echo "ffmpeg end"
         echo $'\n'
-        grep 'Input\|Parsed_psnr\|Parsed_ssim' temp.txt | awk 'NR==1{print "input: \t\t"  $5} NR==2{print "reference: \t" $5} NR==3{print} NR==4{print}' >> $result.txt
+        grep 'Input\|Parsed_psnr\|Parsed_ssim' temp.txt | awk 'NR==1{print "input: \t\t"  $5} NR==2{print "reference: \t" $5} NR==3{print} NR==4{print}' >> $result
         rm temp.txt
 
     done
