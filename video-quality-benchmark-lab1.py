@@ -77,16 +77,17 @@ SSIM_Y, SSIM_U, SSIM_V, SSIM_All, PSNR_y, PSNR_u, PSNR_v, PSNR_average, Elapsed_
     os.system(transcode_command)
     elapsed_time = time.time() - start_time
 
-    psnr_command = """ffmpeg -i xxx/xxx_1080p_10M_15sec.mp4 -i xxx/xxx_1080p_10M_dj2_result_tmp.mp4 -lavfi  \"ssim;[0:v][1:v]psnr\" -f null - 2>&1 \
+    psnr_command = """ffmpeg -i xxx/xxx_1080p_10M_15sec.mp4 -i xxx/xxx_1080p_10M_dj2_result_tmp.mp4 -lavfi \"ssim;[0:v][1:v]psnr\" -f null - 2>&1 | \
 grep 'Parsed_psnr\|Parsed_ssim' | \
-awk 'NR==1{print $5", "$6", "$7", "$8", "} NR==2{print $5", "$6", "$7", "$8", "}' | sed 's/[A-Za-z]*:/\ /g' | \
+awk 'NR==1{print $5","$6","$7","$8","} NR==2{print $5","$6","$7","$8","}' | sed 's/[A-Za-z]*:/\ /g' | sed ':a;N;$!ba;s/\\n//g' | tr -d '\\n' | \
 tee -a output.csv"""
+
 
     print psnr_command
 
     os.system(psnr_command)
 
-    add_elapsed_time_command = """ echo -n " {}," >> output.csv """.format(elapsed_time)
+    add_elapsed_time_command = """ echo -n " {}, " >> output.csv """.format(elapsed_time)
 
     os.system(add_elapsed_time_command)
 
@@ -94,7 +95,5 @@ tee -a output.csv"""
     
     os.system(add_file_size_command)
 
-    os.system("echo '\n' >> output.csv")
-
-
+    os.system("sudo rm xxx/xxx_1080p_10M_dj2_result_tmp.mp4")
 
