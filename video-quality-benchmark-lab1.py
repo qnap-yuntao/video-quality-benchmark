@@ -17,15 +17,15 @@ if __name__=="__main__":
     # qmax_arr = [30, 60, 120]
     # preset_arr = ["ultrafast", "medium", "placebo"]
 
-    g_arr = [5, 10]
-    bf_arr = [5]
+    g_arr = [5]
+    bf_arr = [1,3]
     i_qfactor_arr = [-0.8]
     i_qoffset_arr = [-5]
     b_qfactor_arr = [-0.8]
     b_qoffset_arr = [-5]
     qmin_arr = [1]
     qmax_arr = [30]
-    preset_arr = ["ultrafast", "medium", "placebo"]
+    preset_arr = ["ultrafast", "medium"]
 
     # 用來儲存參數組合的 array
     # 會長這樣： [[參數組合1],[參數組合2], ... ,[參數組合n]]
@@ -93,15 +93,14 @@ SSIM_Y, SSIM_U, SSIM_V, SSIM_All, PSNR_y, PSNR_u, PSNR_v, PSNR_average, Elapsed_
         # 轉檔所需時間 = 轉檔結束的時間 - 轉檔開始的時間
         elapsed_time = time.time() - start_time
 
-        # 做 ssim 與 psnr 的指令，會將結果數值 append 存到 csv 檔案當中
-        ssim_psnr_command = """ffmpeg -i xxx/xxx_1080p_10M_15sec.mp4 -i xxx/xxx_1080p_10M_dj2_result_tmp.mp4 -lavfi \"ssim;[0:v][1:v]psnr\" -f null - 2>&1 | \
+        psnr_command = """ffmpeg -i xxx/xxx_1080p_10M_15sec.mp4 -i xxx/xxx_1080p_10M_dj2_result_tmp.mp4 -lavfi \"ssim;[0:v][1:v]psnr\" -f null - 2>&1 | \
 grep 'Parsed_psnr\|Parsed_ssim' | \
-awk 'NR==1{print $5","$6","$7","$8","} NR==2{print $5","$6","$7","$8","}' | sed 's/[A-Za-z]*:/\ /g' | sed ':a;N;$!ba;s/\\n//g' | tr -d '\\n' >> output.csv"""
+awk 'NR==1{print $5","$6","$7","$8","} NR==2{print $5","$6","$7","$8","}' | sed 's/[A-Za-z]*:/\ /g' | sed ':a;N;$!ba;s/\\n//g' | tr -d '\\n' | \
+tee -a output.csv"""
 
-        print ssim_psnr_command
+        print psnr_command
 
-        # 執行 ssim 與 psnr 分析
-        os.system(ssim_psnr_command)
+        os.system(psnr_command)
 
         # 加入執行時間數據的指令
         add_elapsed_time_command = """ echo -n " {}, " >> output.csv """.format(elapsed_time)
